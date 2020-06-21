@@ -1,0 +1,8 @@
+/target/
+/.idea/compiler.xml
+/.idea/google-java-format.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/pom.xml
+/Sudoku.iml
+/.idea/vcs.xml
