@@ -137,6 +137,20 @@ public class SudokuSolver {
   }
 
   public static void main(String[] args) {
-    System.out.println("This is my sudoku solver!");
+    int[][] HARD_SUDOKU = {
+    {0, 0, 2, 0, 0, 0, 0, 4, 1},
+    {0, 0, 0, 0, 8, 2, 0, 7, 0},
+    {0, 0, 0, 0, 4, 0, 0, 0, 9},
+    {2, 0, 0, 0, 7, 9, 3, 0, 0},
+    {0, 1, 0, 0, 0, 0, 0, 8, 0},
+    {0, 0, 6, 8, 1, 0, 0, 0, 4},
+    {1, 0, 0, 0, 9, 0, 0, 0, 0},
+    {0, 6, 0, 4, 3, 0, 0, 0, 0},
+    {8, 5, 0, 0, 0, 0, 4, 0, 0},
+  };
+
+  SudokuSolver solver = new SudokuSolver(HARD_SUDOKU);
+  solver.puzzleSolver();
+  solver.actualResult();
   }
 }
