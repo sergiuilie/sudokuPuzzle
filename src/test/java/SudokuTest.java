@@ -34,8 +34,8 @@ public class SudokuTest {
    */
   @Test
   public void testSudoku() {
-    SudokuSolver solver = new SudokuSolver(EASY_SUDOKU);
-    SudokuSolver solver2 = new SudokuSolver(HARD_SUDOKU);
+    final SudokuSolver solver = new SudokuSolver(EASY_SUDOKU);
+    final SudokuSolver solver2 = new SudokuSolver(HARD_SUDOKU);
     assertTrue(solver.puzzleSolver());
     assertTrue(solver2.puzzleSolver());
     solver.actualResult();
