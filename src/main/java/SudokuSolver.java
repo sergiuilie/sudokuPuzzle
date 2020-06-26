@@ -48,23 +48,6 @@ public class SudokuSolver {
   }
 
   /**
-   * This anorexic method checks if the column/row is in the given intervals and return the
-   * beginning of the index for which 3x3 square check is applied
-   *
-   * @param index - the current row/column position
-   * @return - the beginning of the 3x3 square
-   */
-  private int attributeIndex(int index) {
-    if (index > 5) {
-      return 6;
-    } else if (index > 2) {
-      return 3;
-    } else {
-      return 0;
-    }
-  }
-
-  /**
    * This method is checking if the 3x3 square is fulfilling the sudoku puzzle condition
    *
    * @param row - current row
@@ -73,8 +56,8 @@ public class SudokuSolver {
    * @return
    */
   private boolean check3Square(int row, int column, int solution) {
-    int squareRow = attributeIndex(row);
-    int squareColumn = attributeIndex(column);
+    int squareRow = row - row % 3;
+    int squareColumn = column - column % 3;
 
     for (int i = squareRow; i < squareRow + 3; i++) {
       for (int j = squareColumn; j < squareColumn + 3; j++) {
